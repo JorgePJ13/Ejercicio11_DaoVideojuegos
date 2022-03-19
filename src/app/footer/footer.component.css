@@ -1,0 +1,14 @@
+hr{
+    margin-top: 100px;
+}
+
+.footer {
+    display: inline-flex;
+    margin-right: 18%;
+    margin-left: 2%;
+}
+
+h4 {
+    color: darkred;
+
+}

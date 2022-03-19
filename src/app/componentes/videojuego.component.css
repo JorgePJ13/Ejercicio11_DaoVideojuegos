@@ -1,0 +1,74 @@
+header {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkblue;
+    color: chartreuse;
+    text-align: center;
+    padding: 2%;
+}
+
+.btns {
+    margin-top: 20px;
+    text-align: center;
+}
+
+span {
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 20px;
+    border: 3px solid darkred;
+    color: brown;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.etiquetas {
+    margin: 5%;
+    display: inline-table;
+}
+
+label {
+    display: block;
+    margin-bottom: 7%;
+    color: purple;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+input {
+    color: brown;
+}
+
+.tabla {
+    text-align: center;
+    font-weight: bold;
+    display: inline-table;
+}
+
+thead {
+    font-size: 20px;
+    color: green;
+}
+
+tbody {
+    font-size: 18px;
+    color: darkmagenta;
+    cursor: pointer;
+}
+
+td {
+    padding: 10px;
+}
+
+.rojo {
+    color: red;
+    font-style: italic;
+}
+
+.azul {
+    color: blue;
+    font-style: italic;
+}

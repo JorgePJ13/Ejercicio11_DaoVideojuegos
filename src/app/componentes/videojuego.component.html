@@ -1,0 +1,68 @@
+<header>{{cabecera}}</header>
+
+<div class="btns">
+    <span>
+        <button (click)="insertar()" [disabled]="deshabilitarInsertar">Insertar</button>
+    </span>
+    <span>
+        <button (click)="modificar()" [disabled]="deshabilitarModificar_Borrar">Modificar</button>
+    </span>
+    <span>
+        <button (click)="eliminar()" [disabled]="deshabilitarModificar_Borrar">Eliminar</button> 
+    </span>
+    <span>
+        <button (click)="vaciar()">Vaciar</button>
+    </span>
+</div>
+
+<div class="etiquetas">
+    <label for="idVideojuego">Identificador: 
+        <input id="idVideojuego" [disabled]="deshabilitarID" type="number" value="{{id==0?'':id}}" />
+    </label>
+
+    <label for="tituloVideojuego">Titulo: 
+        <input id="tituloVideojuego" [(ngModel)]="titulo" type="text" placeholder="My Little Ponny" required />
+        <span class="rojo" *ngIf="!tituloObligatorioOculto"> El título es obligatorio</span>
+    </label>
+
+    <label for="companiaVideojuego">Compañía: 
+        <input id="companiaVideojuego" [(ngModel)]="compania" type="text" placeholder="JordiGames S.A" required />
+        <span class="rojo" *ngIf="!companiaObligatorioOculto"> La compañía es obligatorio</span>
+    </label>
+
+    <label for="valoracionVideojuego">Valoración media: 
+        <input id="valoracionVideojuego" [(ngModel)]="valoracion"  type="number" placeholder="9.5" required />
+        <span class="rojo" *ngIf="!valoracionObligatorioOculto"> La valoracion es obligatoria</span>
+    </label>
+</div>
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Compañía</th>
+                <th>Valoración Media</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of arrayVideojuegos" (click)="consultar(v)">
+                <td>{{v.id}}</td>
+                <td>{{v.titulo}}</td>
+                <td>{{v.compania}}</td>
+                <td>{{v.valoracion}}</td>
+            </tr>
+            <tr *ngIf="arrayVideojuegos.length==0">
+                <td class="rojo" colspan="4">
+                    SIN STOCK DE VIDEOJUEGOS
+                </td>
+            </tr>
+            <tr *ngIf="arrayVideojuegos.length==5">
+                <td class="azul" colspan="4">
+                    MÁXIMO STOCK DE VIDEOJUEGOS
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
